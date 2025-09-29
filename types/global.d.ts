@@ -1,3 +1,10 @@
+import type {
+  Control,
+  FieldError,
+  RegisterOptions,
+  UseFormRegister,
+} from "react-hook-form";
+
 declare global {
   type SignInFormData = {
     email: string;
@@ -55,11 +62,11 @@ declare global {
     href: string;
   };
 
-  type SearchCommandProps = {
-    renderAs?: "button" | "text";
-    label?: string;
-    initialStocks: StockWithWatchlistStatus[];
-  };
+  // type SearchCommandProps = {
+  //   renderAs?: "button" | "text";
+  //   label?: string;
+  //   initialStocks: StockWithWatchlistStatus[];
+  // };
 
   type WelcomeEmailData = {
     email: string;

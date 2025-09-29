@@ -37,7 +37,7 @@ const Signin = () => {
           error={errors.email}
           validation={{
             required: "Email is required",
-            pattern: /^\w+@\w+\.\w+$/,
+            pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
           }}
         />
 
@@ -48,7 +48,7 @@ const Signin = () => {
           register={register}
           error={errors.password}
           validation={{
-            required: "Email is required",
+            required: "Password is required",
             minLength: 8,
           }}
           type="password"
