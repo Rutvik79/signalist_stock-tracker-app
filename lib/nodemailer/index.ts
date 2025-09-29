@@ -20,7 +20,9 @@ export const sendWelcomeEmail = async ({
   );
 
   const mailOptions = {
-    from: `"Signalist" <shinderutviksandeep@gmail.com>`,
+    from: `"Signalist" <${
+      process.env.NODEMAILER_FROM ?? process.env.NODEMAILER_EMAIL
+    }>`,
     to: email,
     subject: `Welcome to Signalist - your stock market toolkit is ready!`,
     text: "Thanks for joining Signalist",
@@ -29,4 +31,3 @@ export const sendWelcomeEmail = async ({
 
   await transporter.sendMail(mailOptions);
 };
-

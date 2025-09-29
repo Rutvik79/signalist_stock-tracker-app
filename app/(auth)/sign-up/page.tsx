@@ -41,6 +41,10 @@ const SignUp = () => {
       const result = await signUpWithEmail(data);
       if (result.success) {
         router.push("/");
+      } else {
+        toast.error("Sign up failed", {
+          description: result.error ?? "Failed to create an account",
+        });
       }
     } catch (error) {
       console.error(error);
@@ -74,7 +78,7 @@ const SignUp = () => {
           validation={{
             required: "Email is required",
             pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-            message: "Email address is required",
+            message: "Enter a valid email address",
           }}
         />
         <InputField

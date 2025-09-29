@@ -16,7 +16,7 @@ export const sendSignUpEmail = inngest.createFunction(
     `;
 
     const prompt = PERSONALIZED_WELCOME_EMAIL_PROMPT.replace(
-      `{{userProfule}}`,
+      "{{userProfule}}",
       userProfile
     );
 
