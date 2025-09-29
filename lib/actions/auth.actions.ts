@@ -1,3 +1,4 @@
+"use server";
 import { headers } from "next/headers";
 import { auth } from "../better-auth/auth";
 import { inngest } from "../inngest/client";
@@ -11,7 +12,6 @@ export const signUpWithEmail = async ({
   riskTolerance,
   preferredIndustry,
 }: SignUpFormData) => {
-  "use server";
   try {
     const response = await auth.api.signUpEmail({
       body: { email, password, name: fullName },
@@ -39,7 +39,6 @@ export const signUpWithEmail = async ({
 };
 
 export const signInWithEmail = async ({ email, password }: SignInFormData) => {
-  "use server";
   try {
     const response = await auth.api.signInEmail({
       body: { email, password },
@@ -53,7 +52,6 @@ export const signInWithEmail = async ({ email, password }: SignInFormData) => {
 };
 
 export const signOut = async () => {
-  "use server";
   try {
     await auth.api.signOut({ headers: await headers() });
   } catch (error) {

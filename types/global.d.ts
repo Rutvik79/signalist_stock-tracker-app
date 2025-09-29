@@ -1,8 +1,8 @@
 // import type {
-  // Control,
-  // FieldError,
-  // RegisterOptions,
-  // UseFormRegister,
+//   Control,
+//   FieldError,
+//   RegisterOptions,
+//   UseFormRegister,
 // } from "react-hook-form";
 
 declare global {
